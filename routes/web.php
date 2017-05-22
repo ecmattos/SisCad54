@@ -306,7 +306,7 @@ Route::group(['prefix' => 'patrimonials'], function () {
 
 Route::group(['prefix' => 'members'], function () {
 	Route::get('/', 'MembersController@search')->middleware('role:admin|permission:members,search')->name('members.search');
-	Route::post('/search_results', 'MembersController@search_results')->name('search_results');
+	Route::post('/search_results', 'MembersController@search_results')->name('members.search_results');
 	Route::get('/search_results_back', 'MembersController@search_results_back')->name('members.search_results_back'); 
 	Route::get('/create', 'MembersController@create')->middleware('role:admin|permission:members.create')->name('members.create');
 	Route::get('/{id}/show', 'MembersController@show')->middleware('role:admin|permission:members.show')->name('members.show');
