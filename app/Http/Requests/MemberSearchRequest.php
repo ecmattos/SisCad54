@@ -24,8 +24,7 @@ class MemberSearchRequest extends Request
     public function rules()
     {
         return [
-            'srch_member_code' => 'required_without_all:srch_member_cpf,srch_member_name,srch_member_plan_id,srch_member_gender_id,srch_member_region_id,srch_member_city_id,srch_member_status_id,srch_member_status_reason_id',
-            'srch_member_cpf' => 'cpf'
+            'srch_member_code' => 'required_without_all:srch_member_cpf,srch_member_name,srch_member_plan_id,srch_member_gender_id,srch_member_region_id,srch_member_city_id,srch_member_status_id,srch_member_status_reason_id'
             //
         ];
     }
@@ -33,8 +32,7 @@ class MemberSearchRequest extends Request
     public function messages()
     {
         return [
-            'srch_member_code.required_without_all' => '<b>Preenchimento MÍNIMO obrigatório</b> >> Favor informar pelo menos UM campo.',
-            'srch_member_cpf.cpf' => '<b>CPF</b> >> Inválido.',
+            'srch_member_code.required_without_all' => '<b>Preenchimento MÍNIMO obrigatório</b> >> Favor informar pelo menos UM campo.'
         ];
     }
 }
