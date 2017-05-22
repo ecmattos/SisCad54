@@ -2,20 +2,17 @@
 
 @section('content')
 
-	<div class="page-header text-primary">
-   	<h4>
-     	<a href="{!! route('dashboard.pc_members') !!}" type="button" class="round round-sm hollow green" rel="tooltip" title="Ir para Painel Controle Associados"><i class="fa fa-users"></i></a>
-      Associados: Consulta
-     	<div class="btn-group btn-group-sm pull-right">
-     		<a href="{!! route('members.search_results_back') !!}" type="button" class="round round-sm hollow" rel="tooltip" title="Resultados"><i class="fa fa-bars"></i></a>
-        <a href="{!! route('members.create') !!}" type="button" class="round round-sm hollow green" rel="tooltip" title="Incluir"><i class="fa fa-file-o"></i></a>
-     		<a href="{!! route('members.edit', ['id' => $member->id]) !!}" type="button" class="round round-sm hollow blue" rel="tooltip" title="Editar"><i class="fa fa-edit"></i></a>
-     		<a href="{!! route('members.search') !!}" type="button" class="round round-sm hollow" rel="tooltip" title="Pesquisar"><i class="fa fa-search"></i></a>
-        <a href="{!! route('members.search') !!}" type="button" class="round round-sm hollow red" rel="tooltip" title="Excluir"><i class="fa fa-trash-o"></i></a>
-    	</div>
-   	</h4>
-   	<hr class="hr-warning" />
-  </div>
+	<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{!! route('members.search_results_back') !!}">Associados</a></li>
+    <li class="breadcrumb-item"><b>Consulta</b></li>
+
+    <div class="btn-group btn-group-sm pull-right">
+      <a href="{!! route('members.create') !!}" type="button" class="round round-sm hollow green" rel="tooltip" title="Incluir"><i class="fa fa-file-o"></i></a>
+      <a href="{!! route('members.edit', ['id' => $member->id]) !!}" type="button" class="round round-sm hollow blue" rel="tooltip" title="Editar"><i class="fa fa-edit"></i></a>
+      <a href="{!! route('members.search') !!}" type="button" class="round round-sm hollow" rel="tooltip" title="Pesquisar"><i class="fa fa-search"></i></a>
+      <a href="{!! route('members.destroy', ['id' => $member->id]) !!}" type="button" class="round round-sm hollow red" rel="tooltip" title="Excluir"><i class="fa fa-trash-o"></i></a>
+    </div>
+  </ol>
 
   <div class="col-sm-8">
     <div class="panel panel-default">

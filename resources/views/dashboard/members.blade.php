@@ -56,7 +56,7 @@
                                     </small>
                                     <div class="pull-right">
                                         <small>
-                                            @if ($plan1_allmembersbystatus->count() == '0')
+                                            @if (($plan1_allmembersbystatus->count() == '0') || ($plan1_allmembersbystatus->count() == Null))
                                                 0 
                                             @else
                                                 {{ $region->members->count() }} ({{ number_format(100*($region->members->count()/$plan1_allmembersbystatus->count()), 0) }}%)
