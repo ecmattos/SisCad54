@@ -32,14 +32,31 @@ class MemberRequest extends Request
         elseif ($member_status_id == "1")
         {
             $validationMemberStatusReason = 'required|in:2,3,4,5,6,7,8,9';
+            $validationMemberDateAafcIni  = 'required|date_format:d/m/Y';
+            $validationMemberDateAafcFim  = 'required_if:member_status_id,1|after:date_aafc_ini|date_format:d/m/Y';
         }
         elseif ($member_status_id == "2")
         {
             $validationMemberStatusReason = 'required|in:1';
+            $validationMemberDateAafcIni  = 'required|date_format:d/m/Y';
+            $validationMemberDateAafcFim  = '';
         }
         elseif ($member_status_id == "3")
         {
             $validationMemberStatusReason = 'required|in:1';
+            $validationMemberDateAafcIni  = '';
+            $validationMemberDateAafcFim  = '';
+        }
+
+        $member_email = Request::get('email');
+
+        if ($member_email == "")
+        {
+            $validationMemberEmail = '';
+        }
+        else
+        {
+            $validationMemberEmail = 'required|email|unique:members,email,'.$this->id.'';
         }
 
         return [
@@ -49,15 +66,15 @@ class MemberRequest extends Request
             'plan_id'                   => 'required',
             'member_status_id'          => 'required',
             'gender_id'                 => 'required',
-            'email'                     => 'max:100|email|unique:members,email,'.$this->id.'',
+            'email'                     => $validationMemberEmail,
             'address'                   => 'required',
             'neighborhood'              => 'required',
             'city_id'                   => 'required',
             'zip_code'                  => 'required|digits:8',
             'phone'                     => 'telefone',
             'mobile'                    => 'celular',
-            'date_aafc_ini'             => 'required_if:member_status_id,1,2|date_format:d/m/Y',
-            'date_aafc_fim'             => 'required_if:member_status_id,1|after:date_aafc_ini|date_format:d/m/Y',
+            'date_aafc_ini'             => $validationMemberDateAafcIni,
+            'date_aafc_fim'             => $validationMemberDateAafcFim,
             'member_status_reason_id'   => $validationMemberStatusReason,
             'birthday'                  => 'date_format:d/m/Y'
             //
@@ -75,6 +92,8 @@ class MemberRequest extends Request
             'plan_id.required'                  => '<b>Plano</b> >> Preenchimento obrigatório.',
             'member_status_id.required'         => '<b>Situação</b> >> Preenchimento obrigatório.',
             'gender_id.required'                => '<b>Sexo</b> >> Preenchimento obrigatório.',
+            'email.required'                    => '<b>e-mail</b> >> Preenchimento obrigatório.',
+            'email.unique'                      => '<b>e-mail</b> >> Indisponível.',
             'address.required'                  => '<b>Endereço</b> >> Preenchimento obrigatório.',
             'neighborhood.required'             => '<b>Bairro</b> >> Preenchimento obrigatório.',
             'city_id.required'                  => '<b>Cidade</b> >> Preenchimento obrigatório.',
