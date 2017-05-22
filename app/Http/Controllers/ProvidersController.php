@@ -90,7 +90,7 @@ class ProvidersController extends Controller
     {
         $cities = $cityRepository
             ->allCities()
-            ->pluck('name', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $provider = $this->providerRepository->findProviderById($id);
