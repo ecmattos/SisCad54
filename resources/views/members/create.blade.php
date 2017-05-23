@@ -7,7 +7,7 @@
 	   		<a href="{!! route('dashboard.pc_members') !!}" type="button" class="round round-sm hollow green" rel="tooltip" title="Ir para Painel Controle Associados"><i class="fa fa-users"></i></a>
 	   		Associados: Inclusão
 	   		<div class="btn-group btn-group-sm pull-right">
-          		<a href="{!! route('members') !!}" type="button" class="round round-sm hollow" rel="tooltip" title="Pesquisar"><i class="fa fa-search"></i></a>
+          		<a href="{!! route('members.search') !!}" type="button" class="round round-sm hollow" rel="tooltip" title="Pesquisar"><i class="fa fa-search"></i></a>
         	</div>
 
 	   		<hr class="hr-warning" />
