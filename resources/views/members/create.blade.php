@@ -2,17 +2,10 @@
 
 @section('content')
 	
-	<div class="page-header text-primary">
-	   	<h4>
-	   		<a href="{!! route('dashboard.pc_members') !!}" type="button" class="round round-sm hollow green" rel="tooltip" title="Ir para Painel Controle Associados"><i class="fa fa-users"></i></a>
-	   		Associados: Inclusão
-	   		<div class="btn-group btn-group-sm pull-right">
-          		<a href="{!! route('members.search') !!}" type="button" class="round round-sm hollow" rel="tooltip" title="Pesquisar"><i class="fa fa-search"></i></a>
-        	</div>
-
-	   		<hr class="hr-warning" />
-	   	</h4>
-	</div>
+	<ol class="breadcrumb">
+    	<li class="breadcrumb-item"><a href="{!! route('members.search_results_back') !!}">Associados</a></li>
+    	<li class="breadcrumb-item"><b>Alteração</b></li>
+  	</ol>
 
 	{!! Form::open(['route' => 'members.store', 'class'=>'form-horizontal', 'role'=>'form']) !!}
 
