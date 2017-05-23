@@ -7,8 +7,6 @@
     	<li class="breadcrumb-item"><b>Alteração</b></li>
   	</ol>
 
-	<hr class="hr-warning" />
-
 	{!! Form::model($member, ['route' => ['members.update', $member->id], 'method' => 'put', 'class' => 'form-horizontal', 'role'=>'form']) !!}
 
 	    <?php $form_method = "put"; ?>
