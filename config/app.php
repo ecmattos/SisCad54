@@ -186,6 +186,8 @@ return [
 
         ResultSystems\Validation\ValidationServiceProvider::class,
 
+        JasperPHP\JasperPHPServiceProvider::class;
+
     ],
 
     /*
