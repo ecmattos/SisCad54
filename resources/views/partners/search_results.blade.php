@@ -26,7 +26,7 @@
 						<th data-field="address">Endereço</th>
 						<th data-field="neighborhood">Bairro</th>	
 						<th data-field="zip_code">CEP</th>
-						<th data-field="email" data-sortable="true">E-mail</th>
+						<th data-field="email" data-sortable="true">e-mail</th>
 						<th data-field="phone">Fone</th>	
 						<th data-field="mobile">Celular</th>
 						<th data-width="1%" class="text-center">#</th>

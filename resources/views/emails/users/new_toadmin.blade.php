@@ -7,7 +7,7 @@
             <p>Segue os dados abaixo:</p>
 			<br>
 			<p>Usuário: {{ $user->name }}</p>
-            <p>E-mail: {{ $user->email }}</p>
+            <p>e-mail: {{ $user->email }}</p>
 			<br>
 
             Para realizar a ativação da conta acima, clique <a href="{{ URL::to('/users') }}">AQUI</a>.

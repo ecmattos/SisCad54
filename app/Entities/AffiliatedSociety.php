@@ -29,7 +29,7 @@ class AffiliatedSociety extends Revisionable
         'neighborhood' => 'Bairro',
         'phone' => 'Telefone',
         'mobile' => 'Celular',
-        'email' => 'E-mail', 
+        'email' => 'e-mail', 
         'city_id' => 'Cidade',
         'comments' => 'Observações',
         'deleted_at' => 'Excluído'

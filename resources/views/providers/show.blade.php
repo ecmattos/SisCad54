@@ -72,7 +72,7 @@
                 </tr>
 
                 <tr>
-                  <td class="text-right">E-mail</td>
+                  <td class="text-right">e-mail</td>
                   <td class="text-left">{{ $provider->email }}</td>
                 </tr>
 

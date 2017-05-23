@@ -36,7 +36,7 @@ class Member extends Revisionable
         'neighborhood' => 'Bairro',
         'phone' => 'Telefone',
         'mobile' => 'Celular',
-        'email' => 'E-mail', 
+        'email' => 'e-mail', 
         'city_id' => 'Cidade',
         'member_status_id' => 'Situação',
         'member_status_reason_id' => 'Motivo desligamento',

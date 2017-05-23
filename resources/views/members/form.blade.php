@@ -49,7 +49,7 @@
 </div>
 
 <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-	<label for="email" class="col-xs-12 col-sm-2 col-md-2 col-lg-2 control-label">E-mail:</label>
+	<label for="email" class="col-xs-12 col-sm-2 col-md-2 col-lg-2 control-label">e-mail:</label>
 	<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-envelope"></i></span>

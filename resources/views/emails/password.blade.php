@@ -5,7 +5,7 @@
             <br>
             <p>Segue os seus dados abaixo:</p>
 			<p>Usuário: {{ $user->name }}</p>
-			<p>E-mail: {{ $user->email }}</p>
+			<p>e-mail: {{ $user->email }}</p>
 			<br>
             Favor cadastrar nova senha, clique <a href="{{ url('password/reset/'.$token) }}">AQUI</a>.
             <br/>

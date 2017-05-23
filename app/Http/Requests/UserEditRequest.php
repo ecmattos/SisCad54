@@ -35,9 +35,9 @@ class UserEditRequest extends Request
             'name.required' => '<b>Usuário</b> >> Preenchimento obrigatório.',
             'name.max' => '<b>Usuário</b> >> MÀXIMO 50 caracteres.',
             'name.unique' => '<b>Usuário</b> >> Indisponível.',
-            'email.required' => '<b>E-mail</b> >> Preenchimento obrigatório.',
-            'email.max' => '<b>E-mail</b> >> MÀXIMO 50 caracteres.',
-            'email.unique' => '<b>E-mail</b> >> Indisponível.'
+            'email.required' => '<b>e-mail</b> >> Preenchimento obrigatório.',
+            'email.max' => '<b>e-mail</b> >> MÀXIMO 50 caracteres.',
+            'email.unique' => '<b>e-mail</b> >> Indisponível.'
         ];
     }
 }

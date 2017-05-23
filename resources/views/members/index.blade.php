@@ -28,7 +28,7 @@
 						<th data-field="zip_code">CEP</th>
 						<th data-field="city_id" data-sortable="true">Cidade/UF</th>	
 						<th data-field="region_id" data-sortable="true">Região</th>
-						<th data-field="email" data-sortable="true">E-mail</th>
+						<th data-field="email" data-sortable="true">e-mail</th>
 						<th data-field="date_fundacao">Fundação</th>
 						<th data-field="date_inss">INSS</th>
 						<th data-field="phone">Fone</th>	

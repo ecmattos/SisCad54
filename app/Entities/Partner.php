@@ -28,7 +28,7 @@ class Partner extends Revisionable
         'neighborhood' => 'Bairro',
         'phone' => 'Telefone',
         'mobile' => 'Celular',
-        'email' => 'E-mail', 
+        'email' => 'e-mail', 
         'city_id' => 'Cidade',
         'partner_type_id' => 'Tipo',
         'deleted_at' => 'Excluído'
