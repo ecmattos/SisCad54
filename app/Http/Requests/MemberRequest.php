@@ -27,22 +27,28 @@ class MemberRequest extends Request
 
         if ($member_status_id == "")
         {
+            $validationMemberStatusId = 'required';
             $validationMemberStatusReason = '';
+            $validationMemberDateAafcIni  = 'required';
+            $validationMemberDateAafcFim  = '';
         }
         elseif ($member_status_id == "1")
         {
+            $validationMemberStatusId = '';
             $validationMemberStatusReason = 'required|in:2,3,4,5,6,7,8,9';
             $validationMemberDateAafcIni  = 'required|date_format:d/m/Y';
             $validationMemberDateAafcFim  = 'required_if:member_status_id,1|after:date_aafc_ini|date_format:d/m/Y';
         }
         elseif ($member_status_id == "2")
         {
+            $validationMemberStatusId = '';
             $validationMemberStatusReason = 'required|in:1';
             $validationMemberDateAafcIni  = 'required|date_format:d/m/Y';
             $validationMemberDateAafcFim  = '';
         }
         elseif ($member_status_id == "3")
         {
+            $validationMemberStatusId = '';
             $validationMemberStatusReason = 'required|in:1';
             $validationMemberDateAafcIni  = '';
             $validationMemberDateAafcFim  = '';
@@ -97,7 +103,7 @@ class MemberRequest extends Request
             'cpf'                       => $validationMemberCpf,
             'name'                      => 'max:100|required',
             'plan_id'                   => 'required',
-            'member_status_id'          => 'required',
+            'member_status_id'          => $validationMemberStatusId,
             'gender_id'                 => 'required',
             'email'                     => $validationMemberEmail,
             'address'                   => 'required',
@@ -109,7 +115,7 @@ class MemberRequest extends Request
             'date_aafc_ini'             => $validationMemberDateAafcIni,
             'date_aafc_fim'             => $validationMemberDateAafcFim,
             'member_status_reason_id'   => $validationMemberStatusReason,
-            'birthday'                  => 'date_format:d/m/Y'
+            'birthday'                  => 'required|date_format:d/m/Y'
             //
         ];
     }
@@ -135,7 +141,8 @@ class MemberRequest extends Request
             'phone.telefone'                    => '<b>Telefone</b> >> Inválido.',
             'mobile.celular'                    => '<b>Celular</b> >> Inválido.',
             'birthday.date_format'              => '<b>Data de Nascimento</b> >> Inválida.',
-            'date_aafc_ini.required_if'         => '<b>Data de Ativo</b> >> Preenchimento obrigatório.',
+            'birthday.required'                 => '<b>Data de Nascimento</b> >> Preenchimento obrigatório.',
+            'date_aafc_ini.required'            => '<b>Data de Ativo</b> >> Preenchimento obrigatório.',
             'date_aafc_ini.date_format'         => '<b>Data de Ativo</b> >> Inválida.',
             'date_aafc_fim.required_if'         => '<b>Data Desligamento</b> >> Preenchimento obrigatório.',
             'date_aafc_fim.date_format'         => '<b>Data Desligamento</b> >> Inválida.',
