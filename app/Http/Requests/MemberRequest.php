@@ -59,9 +59,42 @@ class MemberRequest extends Request
             $validationMemberEmail = 'required|email|unique:members,email,'.$this->id.'';
         }
 
+        $member_cpf = Request::get('cpf');
+
+        if ($member_cpf == "")
+        {
+            $validationMemberCpf = '';
+        }
+        else
+        {
+            $validationMemberCpf = 'cpf_mascara|unique:members,cpf,'.$this->id.',id,deleted_at,NULL';
+        }
+
+        $member_phone = Request::get('phone');
+
+        if ($member_phone == "")
+        {
+            $validationMemberPhone = '';
+        }
+        else
+        {
+            $validationMemberPhone = 'telefone';
+        }
+
+        $member_mobile = Request::get('mobile');
+
+        if ($member_mobile == "")
+        {
+            $validationMemberMobile = '';
+        }
+        else
+        {
+            $validationMemberMobile = 'celular';
+        }
+
         return [
             'code'                      => 'required|unique:members,code,'.$this->id.',id,deleted_at,NULL',
-            'cpf'                       => 'cpf_mascara|unique:members,cpf,'.$this->id.',id,deleted_at,NULL',
+            'cpf'                       => $validationMemberCpf,
             'name'                      => 'max:100|required',
             'plan_id'                   => 'required',
             'member_status_id'          => 'required',
@@ -71,8 +104,8 @@ class MemberRequest extends Request
             'neighborhood'              => 'required',
             'city_id'                   => 'required',
             'zip_code'                  => 'required|digits:8',
-            'phone'                     => 'telefone',
-            'mobile'                    => 'celular',
+            'phone'                     => $validationMemberPhone,
+            'mobile'                    => $validationMemberMobile,
             'date_aafc_ini'             => $validationMemberDateAafcIni,
             'date_aafc_fim'             => $validationMemberDateAafcFim,
             'member_status_reason_id'   => $validationMemberStatusReason,

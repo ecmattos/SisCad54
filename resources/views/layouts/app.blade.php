@@ -204,6 +204,7 @@
 
             $.moment.locale('pt-br', {
             });
+        });
     </script>
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
     
