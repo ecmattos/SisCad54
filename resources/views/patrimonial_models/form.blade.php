@@ -10,7 +10,7 @@
 
 <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
 	{!! Form::label('description', 'Descrição:', array('class' => 'control-label col-sm-2')) !!}
-	<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
 			{!! Form::text('description', null, ['class'=>'form-control', 'maxlength'=>'50']) !!}
