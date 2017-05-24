@@ -25,7 +25,7 @@ class PatrimonialModelRequest extends Request
     {
         return [
             'code' => 'max:5|required|unique:patrimonial_models,code,'.$this->id.',id,deleted_at,NULL',
-            'description' => 'max:20|required|unique:patrimonial_models,description,'.$this->id.',id,deleted_at,NULL'
+            'description' => 'max:50|required|unique:patrimonial_models,description,'.$this->id.',id,deleted_at,NULL'
             //
         ];
     }
@@ -37,7 +37,7 @@ class PatrimonialModelRequest extends Request
             'code.required' => '<b>Código</b> >> Preenchimento obrigatório.',
             'code.unique' => '<b>Código</b> >> Indisponível.',
            
-            'description.max' => '<b>Descrição</b> >> MÁXIMO 20 caracteres.',
+            'description.max' => '<b>Descrição</b> >> MÁXIMO :max caracteres.',
             'description.required' => '<b>Descrição</b> >> Preenchimento obrigatório.',
             'description.unique' => '<b>Descrição</b> >> Indisponível.'
         ];
