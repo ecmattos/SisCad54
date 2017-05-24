@@ -5,7 +5,7 @@
 	<ol class="breadcrumb">
   		<li class="breadcrumb-item">Administração</li>
   		<li class="breadcrumb-item">Associados</li>
-  		<li class="breadcrumb-item"><a href="{!! route('plans') !!}">Planos</a></li>
+  		<li class="breadcrumb-item"><a href="{!! route('plans') !!}" class="btn btn-sm btn-warning"><i class="fa fa-arrow-left"></i> <b>Planos</b></a></li>
   		<li class="breadcrumb-item"><b>Alteração</b></li>
 	</ol>
 
