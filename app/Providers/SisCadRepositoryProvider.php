@@ -142,5 +142,10 @@ class SisCadRepositoryProvider extends ServiceProvider
             \SisCad\Repositories\PatrimonialRepository::class, 
             \SisCad\Repositories\PatrimonialRepositoryEloquent::class
         );
+
+        $this->app->bind(
+            \SisCad\Repositories\AffiliatedSocietyRepository::class, 
+            \SisCad\Repositories\AffiliatedSocietyRepositoryEloquent::class
+        );
     }
 }

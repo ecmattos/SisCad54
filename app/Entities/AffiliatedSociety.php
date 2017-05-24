@@ -1,6 +1,6 @@
 <?php
 
-namespace SisCad;
+namespace SisCad\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
