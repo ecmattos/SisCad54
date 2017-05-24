@@ -25,5 +25,3 @@
     		<a href="{{ URL::previous() }}" class="btn btn-danger">Cancelar <i class="fa fa-times"></i></a>
 		</div>
 </div>
-
-<hr class="hr-warning" />
