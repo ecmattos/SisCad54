@@ -86,6 +86,12 @@
                                             <li><a tabindex="-1" href="{{ url('/patrimonial_movement_types/') }}">Tipos Movimentação</a></li>
                                         </ul>
                                     </li>
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">Materiais</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a tabindex="-1" href="{{ url('/material_units/') }}">Unidades</a></li>
+                                        </ul>
+                                    </li>
                                     
                                     <li class="dropdown-submenu">
                                         <a tabindex="-1" href="#">Parceiros</a>

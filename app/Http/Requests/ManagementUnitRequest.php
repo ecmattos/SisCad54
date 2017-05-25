@@ -30,7 +30,7 @@ class ManagementUnitRequest extends Request
             'neighborhood'              => 'required',
             'city_id'                   => 'required',
             'zip_code'                  => 'required|digits:8',
-            'phone'                     => 'telefone',
+            'phone'                     => 'nullable|telefone',
             'mobile'                    => 'celular',
             'email'                     => 'max:100|required|email|unique:management_units,email,'.$this->id.',id,deleted_at,NULL'
             //

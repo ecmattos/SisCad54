@@ -351,4 +351,24 @@ Route::group(['prefix' => '/management_units'], function () {
 });
 
 
+Route::group(['prefix' => '/material_units'], function () {
+	Route::get('/', 'MaterialUnitsController@index')->middleware('role:admin|permission:material_units')->name('material_units');
+	Route::get('/create', 'MaterialUnitsController@create')->middleware('role:admin|permission:material_units.create')->name('material_units.create');
+	Route::get('/{id}/show', 'MaterialUnitsController@show')->middleware('role:admin|permission:material_units.show')->name('material_units.show');
+	Route::get('/{id}/edit', 'MaterialUnitsController@edit')->middleware('role:admin|permission:material_units.edit')->name('material_units.edit');
+	Route::get('/{id}/destroy', 'MaterialUnitsController@destroy')->middleware('role:admin|permission:material_units.destroy')->name('material_units.destroy');
+	Route::put('/{id}/update', 'MaterialUnitsController@update')->name('material_units.update');
+	Route::post('/', 'MaterialUnitsController@store')->name('material_units.store');
+});
+
+Route::group(['prefix' => '/materials'], function () {
+	Route::get('/', 'MaterialsController@index')->middleware('role:admin|permission:materials')->name('materials');
+	Route::get('/create', 'MaterialsController@create')->middleware('role:admin|permission:materials.create')->name('materials.create');
+	Route::get('/{id}/show', 'MaterialsController@show')->middleware('role:admin|permission:materials.show')->name('materials.show');
+	Route::get('/{id}/edit', 'MaterialsController@edit')->middleware('role:admin|permission:materials.edit')->name('materials.edit');
+	Route::get('/{id}/destroy', 'MaterialsController@destroy')->middleware('role:admin|permission:materials.destroy')->name('materials.destroy');
+	Route::put('/{id}/update', 'MaterialsController@update')->name('materials.update');
+	Route::post('/', 'MaterialsController@store')->name('materials.store');
+});
+
 

@@ -20,7 +20,6 @@ use SisCad\Repositories\PatrimonialSectorRepository;
 use SisCad\Repositories\PatrimonialSubSectorRepository;
 use SisCad\Repositories\PatrimonialStatusRepository;
 use SisCad\Repositories\PatrimonialMovementRepository;
-use SisCad\Repositories\PatrimonialImageRepository;
 use SisCad\Repositories\MaterialRepository;
 use SisCad\Repositories\PatrimonialMaterialRepository;
 use SisCad\Repositories\ServiceRepository;
@@ -44,14 +43,13 @@ class PatrimonialsController extends Controller
     private $patrimonial_sub_sectorRepository;
     private $patrimonial_statusRepository;
     private $patrimonial_movementRepository;
-    private $patrimonial_imageRepository;
     private $materialRepository;
     private $patrimonial_materialRepository;
     private $serviceRepository;
     private $patrimonial_serviceRepository;
     private $patrimonial_intervention_typeRepository;
 
-    public function __construct(PatrimonialRepository $patrimonialRepository, AccountingAccountRepository $accounting_accountRepository, PatrimonialTypeRepository $patrimonial_typeRepository, PatrimonialSubTypeRepository $patrimonial_sub_typeRepository, PatrimonialBrandRepository $patrimonial_brandRepository, PatrimonialModelRepository $patrimonial_modelRepository, ProviderRepository $providerRepository, ManagementUnitRepository $management_unitRepository, PatrimonialSectorRepository $patrimonial_sectorRepository, PatrimonialSubSectorRepository $patrimonial_sub_sectorRepository, PatrimonialStatusRepository $patrimonial_statusRepository, PatrimonialMovementRepository $patrimonial_movementRepository, PatrimonialImageRepository $patrimonial_imageRepository, MaterialRepository $materialRepository, PatrimonialMaterialRepository $patrimonial_materialRepository, ServiceRepository $serviceRepository, PatrimonialServiceRepository $patrimonial_serviceRepository, PatrimonialInterventionTypeRepository $patrimonial_intervention_typeRepository)
+    public function __construct(PatrimonialRepository $patrimonialRepository, AccountingAccountRepository $accounting_accountRepository, PatrimonialTypeRepository $patrimonial_typeRepository, PatrimonialSubTypeRepository $patrimonial_sub_typeRepository, PatrimonialBrandRepository $patrimonial_brandRepository, PatrimonialModelRepository $patrimonial_modelRepository, ProviderRepository $providerRepository, ManagementUnitRepository $management_unitRepository, PatrimonialSectorRepository $patrimonial_sectorRepository, PatrimonialSubSectorRepository $patrimonial_sub_sectorRepository, PatrimonialStatusRepository $patrimonial_statusRepository, PatrimonialMovementRepository $patrimonial_movementRepository, MaterialRepository $materialRepository, PatrimonialMaterialRepository $patrimonial_materialRepository, ServiceRepository $serviceRepository, PatrimonialServiceRepository $patrimonial_serviceRepository, PatrimonialInterventionTypeRepository $patrimonial_intervention_typeRepository)
     {
         $this->patrimonialRepository = $patrimonialRepository;
         $this->accounting_accountRepository = $accounting_accountRepository;
@@ -65,7 +63,6 @@ class PatrimonialsController extends Controller
         $this->patrimonial_sub_sectorRepository = $patrimonial_sub_sectorRepository;
         $this->patrimonial_statusRepository = $patrimonial_statusRepository;
         $this->patrimonial_movementRepository = $patrimonial_movementRepository;
-        $this->patrimonial_imageRepository = $patrimonial_imageRepository;
         $this->materialRepository = $materialRepository;
         $this->patrimonial_materialRepository = $patrimonial_materialRepository;
         $this->serviceRepository = $serviceRepository;

@@ -35,5 +35,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PaymentReasonTableSeeder::class);
         $this->call(PaymentMethodTableSeeder::class);
         $this->call(MeetingTypeTableSeeder::class);
+        $this->call(MaterialUnitTableSeeder::class);
     }
 }
