@@ -9,8 +9,6 @@
   		<li class="breadcrumb-item"><b>Inclusão</b></li>
 	</ol>
 
-	<hr class="hr-warning" />
-
 	{!! Form::open(['route' => 'genders.store', 'class'=>'form-horizontal', 'role'=>'form']) !!}
 
 	    @include('genders.form')
