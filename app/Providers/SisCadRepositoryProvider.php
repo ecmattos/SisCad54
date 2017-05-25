@@ -144,8 +144,43 @@ class SisCadRepositoryProvider extends ServiceProvider
         );
 
         $this->app->bind(
+            \SisCad\Repositories\AccountBalanceTypeRepository::class, 
+            \SisCad\Repositories\AccountBalanceTypeRepositoryEloquent::class
+        );
+        
+        $this->app->bind(
+            \SisCad\Repositories\AccountCoverageTypeRepository::class, 
+            \SisCad\Repositories\AccountCoverageTypeRepositoryEloquent::class
+        );
+
+        $this->app->bind(
+            \SisCad\Repositories\AccountTypeRepository::class, 
+            \SisCad\Repositories\AccountTypeRepositoryEloquent::class
+        );
+
+        $this->app->bind(
+            \SisCad\Repositories\AccountingAccountRepository::class, 
+            \SisCad\Repositories\AccountingAccountRepositoryEloquent::class
+        );
+
+        $this->app->bind(
             \SisCad\Repositories\AffiliatedSocietyRepository::class, 
             \SisCad\Repositories\AffiliatedSocietyRepositoryEloquent::class
+        );
+
+        $this->app->bind(
+            \SisCad\Repositories\BalanceSheetPreviousRepository::class, 
+            \SisCad\Repositories\BalanceSheetPreviousRepositoryEloquent::class
+        );
+
+        $this->app->bind(
+            \SisCad\Repositories\BalanceSheetRepository::class, 
+            \SisCad\Repositories\BalanceSheetRepositoryEloquent::class
+        );
+
+        $this->app->bind(
+            \SisCad\Repositories\ManagementUnitRepository::class, 
+            \SisCad\Repositories\ManagementUnitRepositoryEloquent::class
         );
     }
 }

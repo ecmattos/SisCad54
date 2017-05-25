@@ -57,6 +57,11 @@ class PatrimonialMovement extends Revisionable
         return $this->belongsTo('SisCad\AffiliatedSociety');   
     }
 
+    public function management_unit()
+    {
+        return $this->belongsTo('SisCad\Entities\ManagementUnit'); 
+    }
+
     public function patrimonial_movement_type()
     {
         return $this->belongsTo('SisCad\Entities\PatrimonialMovementType');   

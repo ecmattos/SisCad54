@@ -20,6 +20,10 @@ class MemberStatusTableSeeder extends Seeder
             [
                 'code'        => 'AT',
                 'description' => 'ATIVO'
+            ],
+            [
+                'code'        => 'NS',
+                'description' => 'NAO SOCIO'
             ]
         ];
     

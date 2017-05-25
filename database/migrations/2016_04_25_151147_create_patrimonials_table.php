@@ -31,8 +31,8 @@ class CreatePatrimonialsTable extends Migration
             $table->foreign('patrimonial_status_id')->references('id')->on('patrimonial_statuses');
             $table->date('patrimonial_status_date')->nullable();
 
-            $table->integer('affiliated_society_id')->unsigned()->default(1);
-            $table->foreign('affiliated_society_id')->references('id')->on('affiliated_societies');
+            $table->integer('management_unit_id')->unsigned()->default(1);
+            $table->foreign('management_unit_id')->references('id')->on('management_units');
 
             $table->integer('patrimonial_sector_id')->unsigned()->default(1);
             $table->foreign('patrimonial_sector_id')->references('id')->on('patrimonial_sectors');

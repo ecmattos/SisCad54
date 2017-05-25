@@ -34,7 +34,7 @@ class Patrimonial extends Revisionable
     	'patrimonial_status_id' => 'Situação',
     	'patrimonial_status_date' => 'Data Situação',
     	'provider_id' => 'Fornecedor',
-    	'affiliated_society_id' => 'Filial',
+    	'management_unit_id' => 'Unid.Gestora',
     	'patrimonial_sector_id' => 'Setor',
     	'patrimonial_sub_sector_id' => 'Sub-setor',
     	'serial' => 'Nr serial',
@@ -64,7 +64,7 @@ class Patrimonial extends Revisionable
     	'patrimonial_status_id',
     	'patrimonial_status_date',
     	'provider_id',
-    	'affiliated_society_id',
+    	'management_unit_id',
     	'patrimonial_sector_id',
     	'patrimonial_sub_sector_id',
     	'serial',
@@ -115,6 +115,11 @@ class Patrimonial extends Revisionable
     public function affiliated_society()
     {
         return $this->belongsTo('SisCad\Entities\AffiliatedSociety'); 
+    }
+
+    public function management_unit()
+    {
+        return $this->belongsTo('SisCad\Entities\ManagementUnit'); 
     }
 
     public function patrimonial_sector()

@@ -54,6 +54,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="{{ url('/meetings/') }}" tabindex="0">Eventos</a></li>
                             <li><a href="{{ url('/affiliated_societies/') }}" tabindex="0">Filiais</a></li>
+                            <li><a href="{{ url('/management_units/') }}">Unidades Gestoras</a></li>
                             <li><a href="{{ url('/providers/') }}" tabindex="0">Fornecedores</a></li>
                             <li><a href="{{ url('/patrimonials/') }}" tabindex="0">Patrimônios</a></li>
                             <li class="dropdown">
@@ -94,11 +95,11 @@
                                     </li>
                                     
                                     <li class="dropdown-submenu">
-                                        <a tabindex="-2" href="#">Localidades</a>
+                                        <a tabindex="-1" href="#">Localidades</a>
                                         <ul class="dropdown-menu">
-                                            <li><a tabindex="-2" href="{{ url('/regions/') }}">Regiões</a></li>
-                                            <li><a tabindex="-2" href="{{ url('/states/') }}">Estados</a></li>
-                                            <li><a tabindex="-2" href="{{ url('/cities/') }}">Cidades</a></li>
+                                            <li><a tabindex="-1" href="{{ url('/regions/') }}">Regiões</a></li>
+                                            <li><a tabindex="-1" href="{{ url('/states/') }}">Estados</a></li>
+                                            <li><a tabindex="-1" href="{{ url('/cities/') }}">Cidades</a></li>
                                             <li class="dropdown-submenu">
                                                 <a href="#">Even More..</a>
                                                 <ul class="dropdown-menu">
@@ -117,14 +118,22 @@
                                     </li>
                                     
                                     <li class="dropdown-submenu">
-                                        <a tabindex="-2" href="#">Financeiro</a>
+                                        <a tabindex="-1" href="#">Financeiro</a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu">
                                                 <a href="#">Pagamentos</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="{{ url('/payment_statuses/') }}">Situação</a></li>
-                                                    <li><a href="{{ url('/payment_reasons/') }}">Finalidades</a></li>
-                                                    <li><a href="{{ url('/payment_methods/') }}">Métodos</a></li>
+                                                    <li><a tabindex="-1" href="{{ url('/payment_statuses/') }}">Situação</a></li>
+                                                    <li><a tabindex="-1" href="{{ url('/payment_reasons/') }}">Finalidades</a></li>
+                                                    <li><a tabindex="-1" href="{{ url('/payment_methods/') }}">Métodos</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu">
+                                                <a href="#">Contabilidade</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="{{ url('/accounting_accounts/') }}">Plano Contas</a></li>
+                                                    <li><a href="{{ url('/balance_sheets/') }}">Balancetes</a></li>
+                                                    <li><a href="{{ url('/balance_sheet_previouses/') }}">Saldos iniciais</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

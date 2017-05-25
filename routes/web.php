@@ -315,3 +315,40 @@ Route::group(['prefix' => 'members'], function () {
 	Route::put('/{id}/update', 'MembersController@update')->name('members.update');
 	Route::post('/', 'MembersController@store')->name('members.store');
 });
+
+Route::group(['prefix' => '/accounting_accounts'], function () {
+	Route::get('/', 'AccountingAccounts@index')->middleware('role:admin|permission:accounting_accounts')->name('accounting_accounts');
+	Route::get('/create', 'AccountingAccounts@create')->middleware('role:admin|permission:accounting_accounts.create')->name('accounting_accounts.create');
+	Route::get('/{id}/show', 'AccountingAccounts@show')->middleware('role:admin|permission:accounting_accounts.show')->name('accounting_accounts.show');
+	Route::get('/{id}/edit', 'AccountingAccounts@edit')->middleware('role:admin|permission:accounting_accounts.edit')->name('accounting_accounts.edit');
+	Route::get('/{id}/destroy', 'AccountingAccounts@destroy')->middleware('role:admin|permission:accounting_accounts.destroy')->name('accounting_accounts.destroy');
+	Route::put('/{id}/update', 'AccountingAccounts@update')->name('accounting_accounts.update');
+	Route::post('/', 'AccountingAccounts@store')->name('accounting_accounts.store');
+});
+
+Route::group(['prefix' => '/balance_sheet_previouses'], function () {
+	Route::get('/', 'BalanceSheetPreviouses@index')->middleware('role:admin|permission:balance_sheet_previouses')->name('balance_sheet_previouses');
+	Route::get('/create', 'BalanceSheetPreviouses@create')->middleware('role:admin|permission:balance_sheet_previouses.create')->name('balance_sheet_previouses.create');
+	Route::get('/{id}/show', 'BalanceSheetPreviouses@show')->middleware('role:admin|permission:balance_sheet_previouses.show')->name('balance_sheet_previouses.show');
+	Route::get('/{id}/edit', 'BalanceSheetPreviouses@edit')->middleware('role:admin|permission:balance_sheet_previouses.edit')->name('balance_sheet_previouses.edit');
+	Route::get('/{id}/destroy', 'BalanceSheetPreviouses@destroy')->middleware('role:admin|permission:balance_sheet_previouses.destroy')->name('balance_sheet_previouses.destroy');
+	Route::put('/{id}/update', 'BalanceSheetPreviouses@update')->name('balance_sheet_previouses.update');
+	Route::post('/', 'BalanceSheetPreviouses@store')->name('balance_sheet_previouses.store');
+	Route::get('/search', 'BalanceSheetPreviousesController@search')->middleware('role:admin|permission:balance_sheet_previouses.search')->name('balance_sheet_previouses.search'); 
+	Route::post('/search_results', 'BalanceSheetPreviousesController@search_results')->name('balance_sheet_previouses.search_results');      
+	Route::post('/search_results_back', 'BalanceSheetPreviousesController@search_results_back')->name('balance_sheet_previouses.search_results_back'); 
+});
+
+
+Route::group(['prefix' => '/management_units'], function () {
+	Route::get('/', 'ManagementUnits@index')->middleware('role:admin|permission:management_units')->name('management_units');
+	Route::get('/create', 'ManagementUnits@create')->middleware('role:admin|permission:management_units.create')->name('management_units.create');
+	Route::get('/{id}/show', 'ManagementUnits@show')->middleware('role:admin|permission:management_units.show')->name('management_units.show');
+	Route::get('/{id}/edit', 'ManagementUnits@edit')->middleware('role:admin|permission:management_units.edit')->name('management_units.edit');
+	Route::get('/{id}/destroy', 'ManagementUnits@destroy')->middleware('role:admin|permission:management_units.destroy')->name('management_units.destroy');
+	Route::put('/{id}/update', 'ManagementUnits@update')->name('management_units.update');
+	Route::post('/', 'ManagementUnits@store')->name('management_units.store');
+});
+
+
+
