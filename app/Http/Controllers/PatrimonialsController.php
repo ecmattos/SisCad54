@@ -107,52 +107,52 @@ class PatrimonialsController extends Controller
 
         $accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeId(2)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $patrimonial_types = array(''=>'') + $patrimonial_typeRepository
             ->allPatrimonialTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_sub_types = array(''=>'') + $patrimonial_sub_typeRepository
             ->allPatrimonialSubTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_brands = array(''=>'') + $patrimonial_brandRepository
             ->allPatrimonialBrands()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_models = array(''=>'') + $patrimonial_modelRepository
             ->allPatrimonialModels()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $providers = array(''=>'') + $providerRepository
             ->allProviders()
-            ->lists('cnpj_mask_description', 'id')
+            ->pluck('cnpj_mask_description', 'id')
             ->all();
 
         $management_units = array(''=>'') + $management_unitRepository
             ->allManagementUnits()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $patrimonial_sectors = array(''=>'') + $patrimonial_sectorRepository
             ->allPatrimonialSectors()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $patrimonial_sub_sectors = array(''=>'') + $patrimonial_sub_sectorRepository
             ->allPatrimonialSubSectors()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_statuses = array(''=>'') + $patrimonial_statusRepository
             ->allPatrimonialStatuses()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         return view('patrimonials.search', compact('accounting_accounts', 'patrimonial_types', 'patrimonial_sub_types', 'patrimonial_brands', 'patrimonial_models', 'providers', 'management_units', 'patrimonial_sectors', 'patrimonial_sub_sectors', 'patrimonial_statuses'));
@@ -212,52 +212,52 @@ class PatrimonialsController extends Controller
     {
         $accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeId(2)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $patrimonial_types = array(''=>'') + $patrimonial_typeRepository
             ->allPatrimonialTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_sub_types = array(''=>'') + $patrimonial_sub_typeRepository
             ->allPatrimonialSubTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_brands = array(''=>'') + $patrimonial_brandRepository
             ->allPatrimonialBrands()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_models = array(''=>'') + $patrimonial_modelRepository
             ->allPatrimonialModels()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $providers = array(''=>'') + $providerRepository
             ->allProviders()
-            ->lists('cnpj_mask_description', 'id')
+            ->pluck('cnpj_mask_description', 'id')
             ->all();
 
         $management_units = array(''=>'') + $management_unitRepository
             ->allManagementUnits()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $patrimonial_sectors = array(''=>'') + $patrimonial_sectorRepository
             ->allPatrimonialSectors()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_sub_sectors = array(''=>'') + $patrimonial_sub_sectorRepository
             ->allPatrimonialSubSectors()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_statuses = array(''=>'') + $patrimonial_statusRepository
             ->allPatrimonialNewStatuses()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
         
         return view('patrimonials.create', compact('accounting_accounts', 'patrimonial_types', 'patrimonial_sub_types', 'patrimonial_brands', 'patrimonial_models', 'providers', 'management_units', 'patrimonial_sectors', 'patrimonial_sub_sectors', 'patrimonial_statuses'));
@@ -389,32 +389,32 @@ class PatrimonialsController extends Controller
     {
         $accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeId(2)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $patrimonial_types = array(''=>'') + $patrimonial_typeRepository
             ->allPatrimonialTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_sub_types = array(''=>'') + $patrimonial_sub_typeRepository
             ->allPatrimonialSubTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_brands = array(''=>'') + $patrimonial_brandRepository
             ->allPatrimonialBrands()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_models = array(''=>'') + $patrimonial_modelRepository
             ->allPatrimonialModels()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $providers = array(''=>'') + $providerRepository
             ->allProviders()
-            ->lists('cnpj_mask_description', 'id')
+            ->pluck('cnpj_mask_description', 'id')
             ->all();
 
         $patrimonial = $this->patrimonialRepository->findPatrimonialById($id);
@@ -432,47 +432,47 @@ class PatrimonialsController extends Controller
     {
         $patrimonial_types =  $patrimonial_typeRepository
             ->allPatrimonialTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_sub_types = $patrimonial_sub_typeRepository
             ->allPatrimonialSubTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_brands = $patrimonial_brandRepository
             ->allPatrimonialBrands()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_models = $patrimonial_modelRepository
             ->allPatrimonialModels()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $providers = $providerRepository
             ->allProviders()
-            ->lists('cnpj_mask_description', 'id')
+            ->pluck('cnpj_mask_description', 'id')
             ->all();
 
         $management_units = $management_unitRepository
             ->allManagementUnits()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $patrimonial_sectors = $patrimonial_sectorRepository
             ->allPatrimonialSectors()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_sub_sectors = $patrimonial_sub_sectorRepository
             ->allPatrimonialSubSectors()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_statuses = $patrimonial_statusRepository
             ->allPatrimonialNewStatuses()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
         
         $patrimonial = $this->patrimonialRepository->findPatrimonialById($id);
@@ -572,52 +572,52 @@ class PatrimonialsController extends Controller
     {
         $accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccounts()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $patrimonial_types = $patrimonial_typeRepository
             ->allPatrimonialTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_sub_types = $patrimonial_sub_typeRepository
             ->allPatrimonialSubTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_brands = array(''=>'') + $patrimonial_brandRepository
             ->allPatrimonialBrands()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_models = array(''=>'') + $patrimonial_modelRepository
             ->allPatrimonialModels()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $providers = array(''=>'') + $providerRepository
             ->allProviders()
-            ->lists('cnpj_mask_description', 'id')
+            ->pluck('cnpj_mask_description', 'id')
             ->all();
 
         $management_units = array(''=>'') + $management_unitRepository
             ->allManagementUnits()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $patrimonial_sectors = array(''=>'') + $patrimonial_sectorRepository
             ->allPatrimonialSectors()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_sub_sectors = array(''=>'') + $patrimonial_sub_sectorRepository
             ->allPatrimonialSubSectors()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial_statuses = array(''=>'') + $patrimonial_statusRepository
             ->allPatrimonialStatuses()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $patrimonial = $this->patrimonialRepository->findPatrimonialById($id);
@@ -664,17 +664,17 @@ class PatrimonialsController extends Controller
     {
         $patrimonial_intervention_types = array(''=>'') + $patrimonial_intervention_typeRepository
             ->allPatrimonialInterventionTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $materials = array(''=>'') + $materialRepository
             ->allMaterials()
-            ->lists('code_description_unit', 'id')
+            ->pluck('code_description_unit', 'id')
             ->all();
 
         $providers = array(''=>'') + $providerRepository
             ->allProviders2()
-            ->lists('cnpj_mask_description', 'id')
+            ->pluck('cnpj_mask_description', 'id')
             ->all();
 
         $patrimonial = $this->patrimonialRepository->findPatrimonialById($id);
@@ -714,17 +714,17 @@ class PatrimonialsController extends Controller
     {
         $patrimonial_intervention_types = array(''=>'') + $patrimonial_intervention_typeRepository
             ->allPatrimonialInterventionTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $materials = array(''=>'') + $materialRepository
             ->allMaterials()
-            ->lists('code_description_unit', 'id')
+            ->pluck('code_description_unit', 'id')
             ->all();
 
         $providers = array(''=>'') + $providerRepository
             ->allProviders2()
-            ->lists('cnpj_mask_description', 'id')
+            ->pluck('cnpj_mask_description', 'id')
             ->all();
 
         $patrimonial_material = $this->patrimonial_materialRepository->findPatrimonialMaterialById($id);
@@ -767,17 +767,17 @@ class PatrimonialsController extends Controller
     {
         $patrimonial_intervention_types = array(''=>'') + $patrimonial_intervention_typeRepository
             ->allPatrimonialInterventionTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
             
         $services = array(''=>'') + $serviceRepository
             ->allServices()
-            ->lists('code_description_unit', 'id')
+            ->pluck('code_description_unit', 'id')
             ->all();
 
         $providers = array(''=>'') + $providerRepository
             ->allProviders2()
-            ->lists('cnpj_mask_description', 'id')
+            ->pluck('cnpj_mask_description', 'id')
             ->all();
 
         $patrimonial = $this->patrimonialRepository->findPatrimonialById($id);
@@ -818,17 +818,17 @@ class PatrimonialsController extends Controller
     {
         $patrimonial_intervention_types = array(''=>'') + $patrimonial_intervention_typeRepository
             ->allPatrimonialInterventionTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
             
         $services = array(''=>'') + $serviceRepository
             ->allServices()
-            ->lists('code_description_unit', 'id')
+            ->pluck('code_description_unit', 'id')
             ->all();
 
         $providers = array(''=>'') + $providerRepository
             ->allProviders2()
-            ->lists('cnpj_mask_description', 'id')
+            ->pluck('cnpj_mask_description', 'id')
             ->all();
 
         $patrimonial_service = $this->patrimonial_serviceRepository->findPatrimonialServiceById($id);
@@ -869,7 +869,7 @@ class PatrimonialsController extends Controller
     {
         $management_units = array(''=>'') + $management_unitRepository
             ->allManagementUnits()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         return view('reports.patrimonials.purchases.search', compact('management_units'));

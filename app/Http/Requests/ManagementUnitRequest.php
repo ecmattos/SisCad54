@@ -25,15 +25,14 @@ class ManagementUnitRequest extends Request
     {
         return [
             'code'                      => 'max:15|required|unique:management_units,code,'.$this->id.',id,deleted_at,NULL',
-            'region_id'                 => 'required',
             'description'               => 'max:100|required',
-            'email'                     => 'max:100|email|unique:management_units,email,'.$this->id.',id,deleted_at,NULL',
             'address'                   => 'required',
             'neighborhood'              => 'required',
             'city_id'                   => 'required',
             'zip_code'                  => 'required|digits:8',
             'phone'                     => 'telefone',
-            'mobile'                    => 'celular'
+            'mobile'                    => 'celular',
+            'email'                     => 'max:100|required|email|unique:management_units,email,'.$this->id.',id,deleted_at,NULL'
             //
         ];
     }
@@ -44,7 +43,6 @@ class ManagementUnitRequest extends Request
             'code.max'                  => '<b>Código</b> >> MÁXIMO 15 caracteres.',
             'code.required'             => '<b>Código</b> >> Preenchimento obrigatório.',
             'code.unique'               => '<b>Código</b> >> Indisponível.',
-            'region.required'           => '<b>Unid.Gestora</b> >> Preenchimento obrigatório.',
             'description.max'           => '<b>Descrição</b> >> MÁXIMO 100 caracteres.',
             'description.required'      => '<b>Descrição</b> >> Preenchimento obrigatório.',
             'address.required'          => '<b>Endereço</b> >> Preenchimento obrigatório.',
@@ -53,7 +51,8 @@ class ManagementUnitRequest extends Request
             'zip_code.required'         => '<b>CEP</b> >> Preenchimento obrigatório.',
             'zip_code.digits'           => '<b>CEP</b> >> Inválido (8 dígitos).',
             'phone.telefone'            => '<b>Telefone</b> >> Inválido.',
-            'mobile.celular'            => '<b>Celular</b> >> Inválido.'
+            'mobile.celular'            => '<b>Celular</b> >> Inválido.',
+            'email.required'            => '<b>e-mail</b> >> Preenchimento obrigatório.',
         ];
     }
 }

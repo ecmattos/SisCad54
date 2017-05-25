@@ -50,12 +50,12 @@ class ManagementUnitsController extends Controller
     {
         $regions = array(''=>'') + $regionRepository
             ->allRegions()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $cities = array(''=>'') + $cityRepository
             ->allCities()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         return view('management_units.create', compact('regions', 'cities'));
@@ -108,12 +108,12 @@ class ManagementUnitsController extends Controller
     {
         $regions = array(''=>'') + $regionRepository
             ->allRegions()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $cities = array(''=>'') + $cityRepository
             ->allCities()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $management_unit = $this->management_unitRepository->findManagementUnitById($id);

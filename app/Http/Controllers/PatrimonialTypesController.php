@@ -44,12 +44,12 @@ class PatrimonialTypesController extends Controller
     {
         $asset_accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeId(2)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $depreciation_accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeId(2)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         return view('patrimonial_types.create', compact('asset_accounting_accounts', 'depreciation_accounting_accounts'));
@@ -96,12 +96,12 @@ class PatrimonialTypesController extends Controller
     {
         $asset_accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeId(2)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $depreciation_accounting_accounts = array('1'=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeId(2)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $patrimonial_type = $this->patrimonial_typeRepository->findPatrimonialTypeById($id);

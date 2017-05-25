@@ -3,6 +3,7 @@
 namespace SisCad\Repositories;
 
 use SisCad\Entities\ManagementUnit;
+use SisCad\Entities\Patrimonial;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 

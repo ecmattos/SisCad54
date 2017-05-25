@@ -46,12 +46,12 @@ class BalanceSheetPreviousesController extends Controller
     {
         $accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeId(2)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $management_units = array(''=>'') + $management_unitRepository
             ->allManagementUnits()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         return view('balance_sheet_previouses.search', compact('accounting_accounts', 'management_units'));
@@ -93,12 +93,12 @@ class BalanceSheetPreviousesController extends Controller
     {
         $accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeId(2)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $management_units = array(''=>'') + $management_unitRepository
             ->allManagementUnits()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         return view('balance_sheet_previouses.create', compact('accounting_accounts', 'management_units'));
@@ -158,12 +158,12 @@ class BalanceSheetPreviousesController extends Controller
     {
         $accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeId(2)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $management_units = array(''=>'') + $management_unitRepository
             ->allManagementUnits()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $balance_sheet_previous = $this->balance_sheet_previousRepository->findBalanceSheetPreviousById($id);

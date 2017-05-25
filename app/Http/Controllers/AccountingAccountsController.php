@@ -48,22 +48,22 @@ class AccountingAccountsController extends Controller
     {
         $accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccounts()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $account_types = array(''=>'') + $account_typeRepository
             ->allAccountTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $account_balance_types = array(''=>'') + $account_balance_typeRepository
             ->allAccountBalanceTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $account_coverage_types = array(''=>'') + $account_coverage_typeRepository
             ->allAccountCoverageTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         return view('accounting_accounts.create', compact('accounting_accounts', 'account_types', 'account_balance_types', 'account_coverage_types'));
@@ -111,22 +111,22 @@ class AccountingAccountsController extends Controller
     {
         $accounting_accounts = array(''=>'') + $accounting_accountRepository
             ->allAccountingAccountsByCoverageTypeIdExceptionId(1, $id)
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         $account_types = array(''=>'') + $account_typeRepository
             ->allAccountTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $account_balance_types = array(''=>'') + $account_balance_typeRepository
             ->allAccountBalanceTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $account_coverage_types = array(''=>'') + $account_coverage_typeRepository
             ->allAccountCoverageTypes()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
     
         $accounting_account = $this->accounting_accountRepository->findAccountingAccountById($id);

@@ -2,15 +2,10 @@
 
 @section('content')
 	
-	<div class="page-header text-primary">
-	   	<h4>
-	   		Unidade Gestoras: Inclusão
-	   		<div class="btn-group btn-group-sm pull-right">
-          		<a href="{!! route('management_units') !!}" type="button" class="round round-sm hollow" rel="tooltip" title="Pesquisar"><i class="fa fa-search"></i></a>
-        	</div>
-	   		<hr class="hr-primary" />
-	   	</h4>
-	</div>
+	<ol class="breadcrumb">
+  		<li class="breadcrumb-item"><a href="{!! route('management_units') !!}" class="btn btn-sm btn-warning"><i class="fa fa-arrow-left"></i> <b>Unidade Gestoras</b></a></li>
+		<li class="breadcrumb-item"><b>Inclusão</b></li>
+	</ol>
 
 	{!! Form::open(['route' => 'management_units.store', 'class'=>'form-horizontal', 'role'=>'form']) !!}
 

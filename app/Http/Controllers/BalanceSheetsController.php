@@ -54,7 +54,7 @@ class BalanceSheetsController extends Controller
     {
         $management_units = array(''=>'') + $management_unitRepository
             ->allManagementUnits()
-            ->lists('code_description', 'id')
+            ->pluck('code_description', 'id')
             ->all();
 
         return view('balance_sheets.search', compact('management_units'));
