@@ -192,5 +192,10 @@ class SisCadRepositoryProvider extends ServiceProvider
             \SisCad\Repositories\MaterialRepository::class, 
             \SisCad\Repositories\MaterialRepositoryEloquent::class
         );
+
+        $this->app->bind(
+            \SisCad\Repositories\PatrimonialMaterialRepository::class, 
+            \SisCad\Repositories\PatrimonialMaterialRepositoryEloquent::class
+        );
     }
 }

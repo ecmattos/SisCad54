@@ -57,6 +57,7 @@
                             <li><a href="{{ url('/management_units/') }}">Unidades Gestoras</a></li>
                             <li><a href="{{ url('/providers/') }}" tabindex="0">Fornecedores</a></li>
                             <li><a href="{{ url('/patrimonials/') }}" tabindex="0">Patrimônios</a></li>
+                            <li><a href="{{ url('/materials/') }}" tabindex="0">Materiais</a></li>
                             <li class="dropdown">
                                 <a tabindex="0" data-toggle="dropdown" data-submenu>
                                     Administração<span class="caret"></span>

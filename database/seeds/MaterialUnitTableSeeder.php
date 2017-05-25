@@ -49,7 +49,7 @@ class MaterialUnitTableSeeder extends Seeder
     
         foreach ($material_units as $material_unit)
         {
-            \SisConPat\Entities\MaterialUnit::create($material_unit);
+            \SisCad\Entities\MaterialUnit::create($material_unit);
         }
     }
 }
