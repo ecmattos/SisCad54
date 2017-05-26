@@ -36,5 +36,9 @@ class DatabaseSeeder extends Seeder
         $this->call(PaymentMethodTableSeeder::class);
         $this->call(MeetingTypeTableSeeder::class);
         $this->call(MaterialUnitTableSeeder::class);
+        $this->call(AccountTypeTableSeeder::class);
+        $this->call(AccountBalanceTypeTableSeeder::class);
+        $this->call(AccountCoverageTypeTableSeeder::class);
+        $this->call(AccountingAccountTableSeeder::class);
     }
 }
