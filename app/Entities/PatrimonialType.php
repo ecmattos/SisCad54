@@ -20,7 +20,10 @@ class PatrimonialType extends Revisionable
     #protected $revisionFormattedFields = array('title'  => 'string:<strong>%s</strong>', 'public' => 'boolean:No|Yes', 'deleted_at' => 'isEmpty:Active|Deleted');
     protected $revisionFormattedFieldNames = [
         'code' => 'Código', 
-        'description' => 'Descrição', 
+        'description' => 'Descrição',
+        'asset_accounting_account_id'  => 'Conta Ativo',
+        'depreciation_accounting_account_id' => 'Conta Depreciação',
+        'useful_life_years' => 'Vida útil (anos)', 
         'deleted_at' => 'Excluído'
     ];
     protected $revisionNullString = 'nada';
@@ -33,11 +36,24 @@ class PatrimonialType extends Revisionable
 
     protected $fillable = [
     	'code',
-    	'description'
+    	'description',
+        'asset_accounting_account_id',
+        'depreciation_accounting_account_id',
+        'useful_life_years'
     ];
 
     public function patrimonials()
     {
         return $this->hasMany('SisCad\Entities\Patrimonial');   
+    }
+
+    public function asset_accounting_account()
+    {
+        return $this->belongsTo('SisCad\Entities\AccountingAccount', 'asset_accounting_account_id', 'id'); 
+    }
+
+    public function depreciation_accounting_account()
+    {
+        return $this->belongsTo('SisCad\Entities\AccountingAccount', 'depreciation_accounting_account_id', 'id'); 
     }
 }
