@@ -1,15 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-	<div class="page-header text-primary">
-	   	<h4>
-	   		Administração - Plano de Contas: Pesquisa
-	   		<div class="btn-group btn-group-sm pull-right">
-          		<a href="{!! route('accounting_accounts.create') !!}" type="button" class="round round-sm hollow green" rel="tooltip" title="Incluir"><i class="fa fa-file-o"></i></a>
-        	</div>
-			<hr class="hr-primary" />
-	   	</h4>
-	</div>
+	<ol class="breadcrumb">
+  		<li class="breadcrumb-item">Administração</li>
+  		<li class="breadcrumb-item">Financeiro</li>
+  		<li class="breadcrumb-item">Contabilidade</li>
+  		<li class="breadcrumb-item">Plano de Contas</li>
+  		<li class="breadcrumb-item"><b>Pesquisa</b></li>
+	</ol>
 
 	<div class="table-responsive">
 		<table class="table table-bordered table-striped" id="table_accounting_accounts" data-toggle="table" data-toolbar="#filter-bar" data-show-toggle="false" data-search="false" data-show-filter="true" data-show-columns="true" data-show-export="true" data-pagination="false" data-click-to-select="true" data-toolbar="#filter-bar">
@@ -56,4 +54,10 @@
 		    </tbody>
 		</table>
 	</div>
+@endsection
+
+@section('js_scripts')
+	<script type="text/javascript">
+	  	$('#table_accounting_accounts').bootstrapTable();
+	</script>
 @endsection
