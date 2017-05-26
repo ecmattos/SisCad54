@@ -49,7 +49,7 @@ class MaterialsController extends Controller
     {
         $material_units = array(''=>'') + $material_unitRepository
             ->allMaterialUnits()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         return view('materials.create', compact('material_units'));
@@ -98,7 +98,7 @@ class MaterialsController extends Controller
     {
        $material_units = array(''=>'') + $material_unitRepository
             ->allMaterialUnits()
-            ->lists('description', 'id')
+            ->pluck('description', 'id')
             ->all();
 
         $material = $this->materialRepository->findMaterialById($id);

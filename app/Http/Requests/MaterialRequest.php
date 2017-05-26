@@ -24,7 +24,7 @@ class MaterialRequest extends Request
     public function rules()
     {
         return [
-            'code' => 'max:15|required|unique:materials,code,'.$this->id.',id,deleted_at,NULL',
+            'code' => 'numeric|required|unique:materials,code,'.$this->id.',id,deleted_at,NULL',
             'description' => 'max:100|required|unique:materials,description,'.$this->id.',id,deleted_at,NULL',
             'material_unit_id' => 'required'
             //
@@ -35,6 +35,7 @@ class MaterialRequest extends Request
     {
         return [
             'code.max' => '<b>Código</b> >> MÁXIMO 15 caracteres.',
+            'code.numeric' => '<b>Código</b> >> Caractere(s) inválido(s).',
             'code.required' => '<b>Código</b> >> Preenchimento obrigatório.',
             'code.unique' => '<b>Código</b> >> Indisponível.',
            
