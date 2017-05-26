@@ -20,7 +20,7 @@
 
 <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
 	<label for="name" class="col-xs-12 col-sm-2 col-md-2 col-lg-2 control-label">Nome completo:</label>
-	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
 			{!! Form::text('name', $value = null, ['class'=>'form-control', 'maxlength'=>'50']) !!}
