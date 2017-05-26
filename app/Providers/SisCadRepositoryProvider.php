@@ -114,6 +114,11 @@ class SisCadRepositoryProvider extends ServiceProvider
         );
 
         $this->app->bind(
+            \SisCad\Repositories\PatrimonialMovementRepository::class, 
+            \SisCad\Repositories\PatrimonialMovementRepositoryEloquent::class
+        );
+
+        $this->app->bind(
             \SisCad\Repositories\PaymentStatusRepository::class, 
             \SisCad\Repositories\PaymentStatusRepositoryEloquent::class
         );
@@ -196,6 +201,21 @@ class SisCadRepositoryProvider extends ServiceProvider
         $this->app->bind(
             \SisCad\Repositories\PatrimonialMaterialRepository::class, 
             \SisCad\Repositories\PatrimonialMaterialRepositoryEloquent::class
+        );
+
+        $this->app->bind(
+            \SisCad\Repositories\ServiceRepository::class, 
+            \SisCad\Repositories\ServiceRepositoryEloquent::class
+        );
+
+        $this->app->bind(
+            \SisCad\Repositories\PatrimonialServiceRepository::class, 
+            \SisCad\Repositories\PatrimonialServiceRepositoryEloquent::class
+        );
+
+        $this->app->bind(
+            \SisCad\Repositories\PatrimonialInterventionTypeRepository::class, 
+            \SisCad\Repositories\PatrimonialInterventionTypeRepositoryEloquent::class
         );
     }
 }

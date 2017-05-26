@@ -4,7 +4,7 @@ namespace SisCad\Repositories;
 
 use Prettus\Repository\Contracts\RepositoryInterface;
 
-interface PatrimonialMovementRepository extends RepositoryInterface
+interface ServiceRepository extends RepositoryInterface
 {
 	
 }

@@ -27,6 +27,14 @@ class PatrimonialStatusRepositoryEloquent extends BaseRepository implements Patr
 			->get();
 	}
 
+	public function allPatrimonialNewStatuses()
+	{
+		return $this->patrimonial_status
+			->whereIn('id', [1, 2])
+			->orderBy('description', 'asc')
+			->get();
+	}
+
 	public function findPatrimonialStatusById($id)
     {
         return $this->patrimonial_status->find($id);

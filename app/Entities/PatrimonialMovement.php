@@ -54,7 +54,7 @@ class PatrimonialMovement extends Revisionable
 
     public function affiliated_society()
     {
-        return $this->belongsTo('SisCad\AffiliatedSociety');   
+        return $this->belongsTo('SisCad\Entities\AffiliatedSociety');   
     }
 
     public function management_unit()

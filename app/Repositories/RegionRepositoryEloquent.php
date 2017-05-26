@@ -3,6 +3,7 @@
 namespace SisCad\Repositories;
 
 use SisCad\Entities\Region;
+
 use Prettus\Repository\Eloquent\BaseRepository;
 
 class RegionRepositoryEloquent extends BaseRepository implements RegionRepository
