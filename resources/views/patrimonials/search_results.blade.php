@@ -6,7 +6,7 @@
 	   		Patrimônios: Pesquisa
 	   		<div class="btn-group btn-group-sm pull-right">
           		<a href="{!! route('patrimonials.create') !!}" type="button" class="round round-sm hollow green" rel="tooltip" title="Incluir"><i class="fa fa-file-o"></i></a>
-          		<a href="{!! route('patrimonials') !!}" type="button" class="round round-sm hollow" rel="tooltip" title="Pesquisar"><i class="fa fa-search"></i></a>
+          		<a href="{!! route('patrimonials.search') !!}" type="button" class="round round-sm hollow" rel="tooltip" title="Pesquisar"><i class="fa fa-search"></i></a>
         	</div>
 	   		<hr class="hr-primary" />
 	   	</h4>
