@@ -13,7 +13,7 @@ class Patrimonial extends Revisionable
     use SoftDeletes;
     protected $dates = [
         'patrimonial_status_date',
-        'purchase_date',
+        'invoice_date',
         'deleted_at'
     ];
 
@@ -38,7 +38,7 @@ class Patrimonial extends Revisionable
     	'patrimonial_sector_id' => 'Setor',
     	'patrimonial_sub_sector_id' => 'Sub-setor',
     	'serial' => 'Nr serial',
-    	'purchase_date' => 'Data da compra',
+    	'invoice_date' => 'Data da compra',
     	'purchase_process' => 'Processo de compra',
         'purchase_value' => 'Valor da compra',
     	'invoice' => 'Nota Fiscal',
@@ -68,7 +68,7 @@ class Patrimonial extends Revisionable
     	'patrimonial_sector_id',
     	'patrimonial_sub_sector_id',
     	'serial',
-    	'purchase_date',
+    	'invoice_date',
     	'purchase_process',
         'purchase_value',
     	'invoice',
@@ -79,7 +79,7 @@ class Patrimonial extends Revisionable
     
     public function setPurchaseDateAttribute($value)
     {
-        return $this->attributes['purchase_date'] = Carbon::parse($value)->format('Y-m-d');
+        return $this->attributes['invoice_date'] = Carbon::parse($value)->format('Y-m-d');
     }
 
     public function patrimonial_type()
