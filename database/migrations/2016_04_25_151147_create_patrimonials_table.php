@@ -43,7 +43,7 @@ class CreatePatrimonialsTable extends Migration
             $table->integer('code');
             $table->string('description', 200)->nullable();
             $table->string('serial', 25)->nullable();
-            $table->date('purchase_date')->nullable();
+            $table->date('invoice_date')->nullable();
             $table->string('purchase_process', 25)->nullable();
             $table->float('purchase_value', 10)->default(0);
 

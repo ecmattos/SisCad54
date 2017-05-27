@@ -33,7 +33,7 @@
 							<tr>
 								<th data-field="users" data-sortable="true">Usuários</th>
 								<th data-field="roles" data-sortable="false" data-width="5%">Grupos</th>
-								<th width="1%" class="text-center">#</th>
+								<th data-width="1%" class="text-center">#</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -67,7 +67,7 @@
 						<thead>
 							<tr>
 								<th data-field="roles" data-sortable="true">Permissões</th>
-								<th width="1%" class="text-center">#</th>
+								<th data-width="1%" class="text-center">#</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -75,8 +75,6 @@
 								<tr>
 									<td>{{ $permission->display_name }}</td>
 									<td>
-										<a href="{!! route('role_permissions.destroy', [$permission->id]) !!}" id="link_delete" type="button" class="round round-sm hollow red"><i class="fa fa-trash-o text-danger"></i></a>
-
 										<a href="javascript:;" onclick="onDestroy('{!! route('role_permissions.destroy', [$permission->id]) !!}')" id="link_delete" type="button" class="round round-sm hollow red"><i class="fa fa-trash-o text-danger"></i></a>
 									</td>
 								</tr>

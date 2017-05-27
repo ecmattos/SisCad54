@@ -24,8 +24,8 @@ class DatabaseSeeder extends Seeder
         $this->call(GenderTableSeeder::class);
         $this->call(PartnerTypeTableSeeder::class);
         $this->call(PatrimonialStatusTableSeeder::class);
-        $this->call(PatrimonialTypeTableSeeder::class);
-        $this->call(PatrimonialSubTypeTableSeeder::class);
+        #$this->call(PatrimonialTypeTableSeeder::class);
+        #$this->call(PatrimonialSubTypeTableSeeder::class);
         $this->call(PatrimonialSectorTableSeeder::class);
         $this->call(PatrimonialSubSectorTableSeeder::class);
         $this->call(PatrimonialBrandTableSeeder::class);

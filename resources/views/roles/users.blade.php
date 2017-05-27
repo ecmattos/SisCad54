@@ -6,12 +6,11 @@
 				{!! Form::select('user_id', $role_users, null, ['id'=>'users_list', 'class'=>'form-control']) !!}
 			</div>
 		</div>
-
-		<div class="form-group">
-			<label for="submit" class="control-label"></label>
-				<div class="form-group col-xs-1 col-sm-1 col-md-1 col-lg-1 pull-left">
-					<button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus-circle"></i></button>
-				</div>
-		</div>
 	</div>
+
+	
+		<div class="form-group col-xs-1 col-sm-1 col-md-1 col-lg-1 pull-left">
+			<button type="submit" class="btn btn-sm btn-success"><i class="fa fa-plus-circle"></i></button>
+		</div>
+	
 {!! Form::close() !!}
