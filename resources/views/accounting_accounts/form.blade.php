@@ -70,7 +70,7 @@
 </div>
 
 <div class="form-group">
-	<label for="submit" class="col-sm-2 control-label"></label>
+	<label for="submit" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label"></label>
 		<div class="form-group col-sm-4">
 			<button type="submit" class="btn btn-success">Confirmar <i class="fa fa-check"></i></button>
     		<a href="{{ URL::previous() }}" class="btn btn-danger">Cancelar <i class="fa fa-times"></i></a>
