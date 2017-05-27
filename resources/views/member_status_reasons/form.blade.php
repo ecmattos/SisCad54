@@ -1,5 +1,5 @@
 <div class="form-group {{ $errors->has('code') ? 'has-error' : '' }}">
-	{!! Form::label('code', 'Código:', array('class' => 'control-label col-sm-2')) !!}
+	{!! Form::label('code', 'Código:', array('class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2')) !!}
 	<div class="col-lg-1">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
@@ -9,7 +9,7 @@
 </div>
 
 <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
-	{!! Form::label('description', 'Descrição:', array('class' => 'control-label col-sm-2')) !!}
+	{!! Form::label('description', 'Descrição:', array('class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2')) !!}
 	<div class="col-lg-2">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>

@@ -1,5 +1,5 @@
 <div class="form-group {{ $errors->has('code') ? 'has-error' : '' }}">
-	{!! Form::label('code', 'Código:', ['class' => 'control-label col-sm-2']) !!}
+	{!! Form::label('code', 'Código:', ['class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2']) !!}
 	<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
@@ -9,7 +9,7 @@
 </div>
 
 <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
-	{!! Form::label('description', 'Descrição:', ['class' => 'control-label col-sm-2']) !!}
+	{!! Form::label('description', 'Descrição:', ['class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2']) !!}
 	<div class="col-xs-3 col-sm-8 col-md-6 col-lg-6">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
@@ -19,7 +19,7 @@
 </div>
 
 <div class="form-group {{ $errors->has('unit') ? 'has-error' : '' }}">
-	{!! Form::label('unit', 'Unidade:', ['class' => 'control-label col-sm-2']) !!}
+	{!! Form::label('unit', 'Unidade:', ['class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2']) !!}
 	<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>

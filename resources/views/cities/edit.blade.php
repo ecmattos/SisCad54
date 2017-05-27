@@ -9,8 +9,6 @@
   		<li class="breadcrumb-item"><b>Alteração</b></li>
 	</ol>
 
-	<hr class="hr-warning" />
-
 	{!! Form::model($city, ['route' => ['cities.update', $city->id], 'method' => 'put', 'class' => 'form-horizontal', 'role'=>'form']) !!}
 
 	    @include('cities.form')

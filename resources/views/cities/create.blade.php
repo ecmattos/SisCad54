@@ -8,8 +8,7 @@
   		<li class="breadcrumb-item"><a href="{!! route('cities') !!}">Cidades</a></li>
   		<li class="breadcrumb-item"><b>Inclusão</b></li>
 	</ol>
-
-	<hr class="hr-warning" />
+	
 	{!! Form::open(['route' => 'cities.store', 'class'=>'form-horizontal', 'role'=>'form']) !!}
 
 	    @include('cities.form')

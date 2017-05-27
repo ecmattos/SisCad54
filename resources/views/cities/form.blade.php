@@ -1,5 +1,5 @@
 <div class="form-group">
-	{!! Form::label('state_id', 'UF:', ['class' => 'control-label col-sm-2']) !!}
+	{!! Form::label('state_id', 'UF:', ['class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2']) !!}
 	<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
@@ -9,7 +9,7 @@
 </div>
 
 <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
-	{!! Form::label('description', 'Descrição:', ['class' => 'control-label col-sm-2']) !!}
+	{!! Form::label('description', 'Descrição:', ['class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2']) !!}
 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
@@ -19,7 +19,7 @@
 </div>
 
 <div class="form-group {{ $errors->has('region_id') ? 'has-error' : '' }}">
-	{!! Form::label('region_id', 'Região:', ['class' => 'control-label col-sm-2']) !!}
+	{!! Form::label('region_id', 'Região:', ['class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2']) !!}
 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
