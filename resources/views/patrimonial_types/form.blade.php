@@ -1,19 +1,19 @@
 <div class="form-group {{ $errors->has('code') ? 'has-error' : '' }}">
 	{!! Form::label('code', 'Código:', ['class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2']) !!}
-	<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+	<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
-			{!! Form::text('code', null, ['class'=>'form-control', 'autofocus'=>'autofocus', 'maxlength'=>'5']) !!}
+			{!! Form::text('code', null, array('class'=>'form-control', 'autofocus'=>'autofocus')) !!}
 		</div>
 	</div>
 </div>
 
 <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
 	{!! Form::label('description', 'Descrição:', ['class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2']) !!}
-	<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+	<div class="col-xs-8 col-sm-6 col-md-4 col-lg-3">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
-			{!! Form::text('description', null, ['class'=>'form-control', 'maxlength'=>'20']) !!}
+			{!! Form::text('description', null, ['class'=>'form-control']) !!}
 		</div>
 	</div>
 </div>
@@ -39,8 +39,8 @@
 </div>
 
 <div class="form-group {{ $errors->has('useful_life_years') ? 'has-error' : '' }}">
-	<label for="useful_life_years" class="col-xs-12 col-sm-2 col-md-2 col-lg-2 control-label">Vida útil (anos):</label>
-	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+	{!! Form::label('useful_life_years', 'Vida útil (anos):', ['class' => 'control-label col-xs-2 col-sm-2 col-md-2 col-lg-2']) !!}
+	<div class="col-xs-4 col-sm-2 col-md-2 col-lg-1">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 			{!! Form::text('useful_life_years', $value = null, ['id'=>'useful_life_years', 'class'=>'form-control']) !!}
