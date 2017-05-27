@@ -3,14 +3,14 @@
 	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-1">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
-			{!! Form::text('code', $value = null, ['class'=>'form-control', 'maxlength'=>'10']) !!}
+			{!! Form::text('code', $value = null, ['class'=>'form-control', 'maxlength'=>'100']) !!}
 		</div>
 	</div>
 </div>
 
 <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
 	<label for="description" class="col-xs-12 col-sm-2 col-md-2 col-lg-2 control-label">Descrição:</label>
-	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 		<div class="input-group input-group-sm">
 			<span class="input-group-addon"><i class="fa fa-question-circle"></i></span>
 			{!! Form::text('description', $value = null, ['class'=>'form-control', 'maxlength'=>'100']) !!}

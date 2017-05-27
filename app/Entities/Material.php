@@ -19,7 +19,6 @@ class Material extends Revisionable
     protected $historyLimit = 9999999; //Maintain a maximum of 500 changes at any point of time, while cleaning up old revisions.
     protected $revisionCreationsEnabled = true;
     protected $dontKeepRevisionOf = [
-        'description'
     ];
     #protected $revisionFormattedFields = array('title'  => 'string:<strong>%s</strong>', 'public' => 'boolean:No|Yes', 'deleted_at' => 'isEmpty:Active|Deleted');
     protected $revisionFormattedFieldNames = [
